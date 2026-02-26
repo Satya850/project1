@@ -96,3 +96,26 @@ Then open **http://localhost:8501** in your browser.
 ## License
 
 This project is for educational/research purposes.
+Step 1: Install Dependencies
+Open a terminal in the project folder and run:
+
+bash
+pip install -r requirements.txt
+Step 2: Train the Model
+bash
+python main.py --mode synthetic --epochs 50 --batch_size 32 --model_type standard --output_dir outputs
+This trains the anomaly detection model using synthetic data.
+
+Step 3: Run the Dashboard
+bash
+streamlit run dashboard.py
+Then open http://localhost:8501 in your browser.
+
+Summary
+Step	Command	What it does
+1	pip install -r requirements.txt	Installs all required Python packages
+2	python main.py --mode synthetic --epochs 50 --batch_size 32 --model_type standard --output_dir outputs	Trains the anomaly detection model
+3	streamlit run dashboard.py	Launches the web dashboard
+Note: Make sure you're in the cctv-video-anomaly-detection-main folder when running these commands. You need Python 3.8+ installed on your system.
+
+
